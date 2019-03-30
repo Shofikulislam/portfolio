@@ -537,7 +537,46 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     background: #fff;
     color: #000;
 }
-
+.home-scroll-btn {
+	display: block;
+	bottom: 50px;
+	height: 40px;
+	width: 26px;
+	border: 2px solid #efefef;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+    border-radius: 14px;
+    z-index: 999;
+}
+.home-scroll-btn .dot {
+	display: block;
+	height: 6px;
+	width: 6px;
+	background-color: #efefef;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-animation: dot-animation 1.8s infinite ease-in-out;
+	-moz-animation: dot-animation 1.8s infinite ease-in-out;
+	animation: dot-animation 1.8s infinite ease-in-out;
+}
+.hor-center {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
 .animate-border {
     position: relative;
     display: block;
@@ -563,6 +602,61 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     border-right-color: #f7f7f7;
     border-left-color: #f7f7f7;
 }
+/*Smooth Scroll Button animation*/
+@-webkit-keyframes dot-animation {
+	0% {
+		top: -webkit-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	100% {
+		top: -webkit-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 0;
+	}
+}
+@-moz-keyframes dot-animation {
+	0% {
+		top: -moz-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	100% {
+		top: -moz-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 0;
+	}
+}
+@keyframes dot-animation {
+	0% {
+		top: -webkit-calc(50% - 6px);
+		top: -moz-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	100% {
+		top: -webkit-calc(50% - 6px);
+		top: -moz-calc(50% - 6px);
+		top: calc(50% - 6px);
+		opacity: 0;
+	}
+}
+
+
+
+/* Animated heading border */
 
 @-webkit-keyframes animborder {
     0% {
@@ -585,8 +679,6 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
         transform: translateX(113px);
     }
 }
-
-/* Animated heading border */
 
 @keyframes primary-short {
     0% {
@@ -830,6 +922,82 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     height: 100%;
 }
 
+/*=================================
+  start  project section
+ =================================*/
+ #mixcontent .mix {
+    display: none;
+  }
+  
+  .portfolio-area [class*=" col-"] {
+    padding: 0px 5px;
+  }
+  
+  .recent-folio-menu {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .recent-folio-menu ul li {
+    display: inline-block;
+    font-weight: 600;
+    color: #282828;
+    padding: 0 30px;
+    margin-right: -5px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .recent-folio-menu ul li.active {
+    border-color: #ffb923;
+    color: #ffb923;
+  }
+ 
+  .single-portfolio {
+    position: relative;
+  }
+  
+  .single-portfolio img {
+    width: 100%;
+  }
+  
+  /* .single-recent-work .recet-work-footer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .single-recent-work .recet-work-footer h4 {
+    color: #fff;
+    padding-right: 25px;
+  }
+  
+  .single-recent-work .recet-work-footer h4 span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .single-recent-work .link-more {
+    font-size: 30px;
+    padding: 5px 20px;
+    background: #ffb923;
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .single-recent-work:hover .link-more {
+    opacity: 1;
+    visibility: visible;
+  } */
+  
 /*::::::::::::::::::::::::::::::::::::
             Contact area
 ::::::::::::::::::::::::::::::::::::*/
@@ -953,7 +1121,9 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     text-align: center;
     transition: 400ms;
 }
-
+.footer-social ul li a i:hover {
+    transform: rotate(360deg);
+}
 .footer-social ul li a i.fa-facebook:hover {
     background: #3b5998;
     color: #fff;
