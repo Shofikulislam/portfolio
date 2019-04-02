@@ -546,7 +546,7 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
 	-webkit-border-radius: 14px;
 	-moz-border-radius: 14px;
     border-radius: 14px;
-    z-index: 999;
+    z-index: 9;
 }
 .home-scroll-btn .dot {
 	display: block;
