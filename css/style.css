@@ -258,6 +258,10 @@ section,
     clear: both;
     height: 20px;
 }
+.gap-50 {
+    clear: both;
+    height: 50px;
+}
 
 .gap-100 {
     clear: both;
@@ -755,6 +759,49 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     background: #f7f9fd;
 }
 
+.resume-wrapper {
+    padding: 30px;
+    background: #f7f7f7;
+}
+
+.title-small:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: -10px;
+    bottom: 0;
+    background-color: #fd9129;
+}
+
+.title-small {
+    position: relative;
+}
+
+.post-cat {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.1em;
+    margin: 0 0 3px;
+    background-color: #fd9129;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.designation {font-weight: 900;}
+
+.designation span {
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.column-title {text-transform: uppercase;}
+
 .left-progress-bar {
     padding: 20px 50px;
 }
@@ -766,7 +813,8 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
 
 @media (max-width: 720px) {
     .left-progress-bar {
-        width: 90%;
+        width: 100%;
+        padding: 20px 0;
     }
 }
 
@@ -942,7 +990,7 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
     display: inline-block;
     font-weight: 600;
     color: #282828;
-    padding: 0 30px;
+    padding: 30px;
     margin-right: -5px;
     cursor: pointer;
     position: relative;
@@ -1001,7 +1049,11 @@ nav .main-menu .navbar-nav .nav-item .nav-link {
 /*::::::::::::::::::::::::::::::::::::
             Contact area
 ::::::::::::::::::::::::::::::::::::*/
-
+.contact {
+    background-image: url(../images/map.png);
+    background-position: center;
+    background-size: cover;
+}
 .contact-item {
     margin-bottom: 30px;
 }
